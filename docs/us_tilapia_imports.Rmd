@@ -1,0 +1,34 @@
+---
+title: "Tilapia Imports"
+author: "Amritpal Sandhu"
+date: "2022-08-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+library(skimr)
+```
+
+```{r}
+tilapia_data <- read_csv(here::here("data", "us_tilapia_imports.csv"))
+
+summary(tilapia_data)
+
+names(tilapia_data)
+
+dim(tilapia_data)
+
+skim(tilapia_data)
+```
+
+```{r}
+pivot_longer(cols = , names_to = "year", values_to = "imports")
+```
+
